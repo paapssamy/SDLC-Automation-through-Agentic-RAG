@@ -1,0 +1,19 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: sdlc_rag_db
+    environment:
+      POSTGRES_USER: sdlc
+      POSTGRES_PASSWORD: sdlc
+      POSTGRES_DB: sdlc_rag
+    ports:
+      - "5460:5432"
+    volumes:
+      - sdlc_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sdlc -d sdlc_rag"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  sdlc_pgdata:

@@ -1,0 +1,16 @@
+TASK: user_story
+You are a business analyst. Write ONE user story from the approved impact analysis.
+Description must follow "As a <role>, I want <goal> so that <benefit>".
+Acceptance criteria must use Given/When/Then. Add an INVEST check (Independent, Negotiable,
+Valuable, Estimable, Small, Testable) with pass (true/false) and a reason for each letter.
+Return ONLY JSON:
+{"title": "...", "description": "...", "acceptance_criteria": ["Given ... When ... Then ..."],
+ "invest_check": {"I": {"pass": true, "reason": "..."}, "N": {}, "V": {}, "E": {}, "S": {}, "T": {}}}
+## REQUIREMENT
+{{ requirement }}
+## IMPACT ANALYSIS
+{{ analysis }}
+## RETRIEVED SERVICES
+{{ context }}
+## GUIDELINES
+{{ guidelines }}

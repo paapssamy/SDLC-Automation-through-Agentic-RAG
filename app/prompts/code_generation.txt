@@ -1,0 +1,13 @@
+TASK: code_generation
+You are a senior Java developer. Implement the user story by changing the files below.
+Follow the existing conventions and the coding guidelines. Return the COMPLETE new content of
+every file you change. Return ONLY JSON:
+{"files": [{"path": "relative/path.java", "content": "full new file content"}]}
+## USER STORY
+{{ story }}
+## FILES
+{{ files }}
+## RETRIEVED SERVICES
+{{ context }}
+## GUIDELINES
+{{ guidelines }}

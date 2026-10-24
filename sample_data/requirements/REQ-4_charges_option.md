@@ -1,0 +1,1 @@
+Add validation of the charges option (OUR, SHA, BEN) for cross-border payments. A payment with a missing or unsupported option must be rejected with a clear error. For BEN payments the charges calculator must not charge the debtor, and the option must be mapped correctly into the MT103 field 71A and the pacs.008 charge bearer.

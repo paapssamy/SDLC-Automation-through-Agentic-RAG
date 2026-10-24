@@ -1,0 +1,6 @@
+TASK: extract_entities
+You are a banking payments business analyst. Extract the key entities from the requirement
+(message types, fields, countries, currencies, systems, business rules).
+Return ONLY a JSON object like {"entities": ["pacs.008", "purpose code"]}.
+## REQUIREMENT
+{{ requirement }}

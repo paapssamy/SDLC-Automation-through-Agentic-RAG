@@ -1,0 +1,1 @@
+Add a new sanctions screening check for an updated country list issued by compliance. Payments where the creditor country is on the new list must be blocked before the debtor account is debited, and the block reason must be recorded for audit. The existing sanctioned country check must continue to work.

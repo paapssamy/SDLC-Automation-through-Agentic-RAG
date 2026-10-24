@@ -1,0 +1,1 @@
+Add a mandatory purpose code field to outgoing pacs.008 messages. The clearing partner will reject credit transfers without a purpose code from the next quarter. The code (for example SALA, SUPP, TRAD) is taken from the payment request and must be validated before the message is built. Applies to SGD and USD payments in the Singapore market.

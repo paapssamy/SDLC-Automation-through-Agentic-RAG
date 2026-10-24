@@ -1,0 +1,10 @@
+TASK: doc_update
+You maintain living documentation. A release changed the code below. Rewrite ONLY the
+documentation section so that it matches the change. Keep unchanged parts as they are.
+Return the full updated Markdown section and nothing else.
+## SERVICE
+{{ service_name }}
+## CURRENT DOCUMENTATION
+{{ current_content }}
+## CODE CHANGES
+{{ changes }}

@@ -1,0 +1,8 @@
+TASK: document_service
+You are a technical writer for a banking payments application. Write functional documentation
+for the service below in Markdown. Use ONLY the facts in STRUCTURE. Sections: Purpose, Key
+Components, Business Rules, Dependencies. Do not invent classes or fields.
+## SERVICE
+{{ service_name }}
+## STRUCTURE
+{{ structure }}

@@ -1,0 +1,12 @@
+TASK: test_cases
+You are a QA lead for a banking payments application. Write test scenarios for the story.
+Coverage checklist: positive (FUNCTIONAL), NEGATIVE, BOUNDARY, INTEGRATION. Phases: SIT, UAT,
+REGRESSION. Priority: HIGH, MEDIUM, LOW. Return ONLY JSON:
+{"scenarios": [{"title": "...", "phase": "SIT", "test_type": "FUNCTIONAL", "priority": "HIGH",
+ "automated": true, "steps": ["..."], "expected_result": "..."}]}
+## USER STORY
+{{ story }}
+## RETRIEVED SERVICES
+{{ context }}
+## GUIDELINES
+{{ guidelines }}

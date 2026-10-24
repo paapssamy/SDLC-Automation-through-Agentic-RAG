@@ -1,0 +1,48 @@
+{
+  "releases": [
+    {
+      "id": "REL-2026.01",
+      "name": "Release 2026.01 - Purpose code on pacs.008",
+      "completed_at": "2026-01-15T10:00:00+00:00",
+      "work_items": [{"id": "1001", "title": "Add purpose code to pacs.008"}],
+      "changes": [
+        {
+          "work_item_id": "1001",
+          "commit_id": "a1b2c3d",
+          "file_path": "src/main/java/com/bank/payments/messaging/Pacs008MessageBuilder.java",
+          "class_name": "Pacs008MessageBuilder",
+          "code_diff": "--- a/Pacs008MessageBuilder.java\n+++ b/Pacs008MessageBuilder.java\n@@ -20,3 +20,8 @@\n+    String purposeElement(String purposeCode) {\n+        return \"<Purp><Cd>\" + purposeCode + \"</Cd></Purp>\";\n+    }\n+\n"
+        },
+        {
+          "work_item_id": "1001",
+          "commit_id": "a1b2c3e",
+          "file_path": "src/main/java/com/bank/payments/validation/PaymentValidator.java",
+          "class_name": "PaymentValidator",
+          "code_diff": "--- a/PaymentValidator.java\n+++ b/PaymentValidator.java\n@@ -30,3 +30,7 @@\n+    boolean isPurposeCodeValid(String purposeCode) {\n+        return purposeCode != null && purposeCode.length() == 4;\n+    }\n"
+        }
+      ]
+    },
+    {
+      "id": "REL-2026.02",
+      "name": "Release 2026.02 - SGD high-value cut-off",
+      "completed_at": "2026-02-10T09:30:00+00:00",
+      "work_items": [{"id": "1002", "title": "Change SGD high-value cut-off"}],
+      "changes": [
+        {
+          "work_item_id": "1002",
+          "commit_id": "d4e5f6a",
+          "file_path": "src/main/java/com/bank/payments/cutoff/CutOffTimeService.java",
+          "class_name": "CutOffTimeService",
+          "code_diff": "--- a/CutOffTimeService.java\n+++ b/CutOffTimeService.java\n@@ -14,3 +14,3 @@\n-            return SGD_CUTOFF.minusHours(1);\n+            return SGD_CUTOFF.minusHours(2);\n+    boolean isHighValue(double amount) {\n+        return amount >= HIGH_VALUE_LIMIT;\n+    }\n"
+        },
+        {
+          "work_item_id": "1002",
+          "commit_id": "d4e5f6b",
+          "file_path": "src/main/java/com/bank/payments/notification/PaymentStatusNotifier.java",
+          "class_name": "PaymentStatusNotifier",
+          "code_diff": "--- a/PaymentStatusNotifier.java\n+++ b/PaymentStatusNotifier.java\n@@ -8,3 +8,6 @@\n+    public void notifyNextBusinessDay(String reference) {\n+        System.out.println(\"Payment \" + reference + \" moves to next business day\");\n+    }\n"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Change the cut-off time for SGD high-value payments from 14:00 to 13:00 on business days. High-value means an amount of 1,000,000 or more. Payments received after the new cut-off must be processed on the next business day and the customer notified.
